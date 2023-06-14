@@ -1,3 +1,7 @@
+// Mailchimp2 API key: a4bb2e88e5e32c06baa3a58a35d41e6c-us21
+// mailchimp2 List Id: ae5f34a94e
+
+
 const express = require('express')
 const bodyParser = require('body-parser')
 const https = require('https')
@@ -66,5 +70,3 @@ app.listen(process.env.PORT || 3000, ()=>console.log("Server started on port 300
 // Mailchimp2 List ID: 35cc034da4
 // mailchimp1 url: https://${dc}.api.mailchimp.com/3.0/lists/{list_id}
 
-// Mailchimp2 API key: a4bb2e88e5e32c06baa3a58a35d41e6c-us21
-// mailchimp2 List Id: ae5f34a94e
