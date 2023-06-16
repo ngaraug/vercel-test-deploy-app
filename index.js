@@ -2,6 +2,7 @@
 // mailchimp2 List Id: ae5f34a94e
 
 // Mailchimp API key 3: 6894af386ea90791cafbea1310890f47-us21
+// Mailchimp API key 4: 2cf55f58311ed869fa4a7cf64deb6773-us21
 
 
 // const express = require('express')
@@ -56,7 +57,7 @@ app.post('/', (req,res)=>{
     const url = "https://us21.api.mailchimp.com/3.0/lists/35cc034da4"
     const options = {
         method:'POST',
-        auth:"ngaraug:6894af386ea90791cafbea1310890f47-us21"
+        auth:"ngaraug:2cf55f58311ed869fa4a7cf64deb6773-us21"
     }
 
     const request = https.request(url, options, (response)=>{
