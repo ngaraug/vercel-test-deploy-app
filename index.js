@@ -3,6 +3,7 @@
 
 // Mailchimp API key 3: 6894af386ea90791cafbea1310890f47-us21
 // Mailchimp API key 4: 2cf55f58311ed869fa4a7cf64deb6773-us21
+// Mailchimp API key 5: 2d0405af5c82846067218bd3d7bf00e8-us21
 
 
 // const express = require('express')
@@ -12,7 +13,7 @@
 import express from "express"
 import bodyParser from "body-parser"
 import https from "https"
-
+import 'dotenv/config'
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -54,10 +55,12 @@ app.post('/', (req,res)=>{
     }
     var JSONData = JSON.stringify(data)
 
+    const API_key = process.env.API_KEY
     const url = "https://us21.api.mailchimp.com/3.0/lists/35cc034da4"
     const options = {
         method:'POST',
-        auth:"ngaraug:2cf55f58311ed869fa4a7cf64deb6773-us21"
+        // auth:"ngaraug:2cf55f58311ed869fa4a7cf64deb6773-us21"
+        auth:`ngaraug:${API_key}`
     }
 
     const request = https.request(url, options, (response)=>{
