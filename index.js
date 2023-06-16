@@ -2,9 +2,14 @@
 // mailchimp2 List Id: ae5f34a94e
 
 
-const express = require('express')
-const bodyParser = require('body-parser')
-const https = require('https')
+// const express = require('express')
+// const bodyParser = require('body-parser')
+// const https = require('https')
+
+import express from "express"
+import bodyParser from "body-parser"
+import https from "https"
+
 
 const app = express()
 
