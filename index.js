@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 
 app.get("/", (req, res)=>{
     // res.sendFile(__dirname + "/signup.html")
-    req.sendFile("/signup.html")
+    res.sendFile("/signup.html")
     // res.send("working")
 
 })
