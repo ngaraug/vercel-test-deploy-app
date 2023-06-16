@@ -11,6 +11,13 @@ import bodyParser from "body-parser"
 import https from "https"
 
 
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+
 const app = express()
 
 app.use(express.static("public"))
@@ -18,8 +25,8 @@ app.use(bodyParser.urlencoded({extended:true}))
 
 
 app.get("/", (req, res)=>{
-    // res.sendFile(__dirname + "/signup.html")
-    res.sendFile("./signup.html")
+    res.sendFile(__dirname + "/signup.html")
+    // res.sendFile("./signup.html")
     // res.send("working")
 
 })
@@ -56,11 +63,11 @@ app.post('/', (req,res)=>{
             JSON.parse(data)
         })
         if(response.statusCode === 200){
-            // res.sendFile(__dirname + '/success.html')
-            res.sendFile('./success.html')
+            res.sendFile(__dirname + '/success.html')
+            // res.sendFile('success.html')
         }else{
-            // res.sendFile(__dirname + '/failure.html')
-            res.sendFile('./failure.html')
+            res.sendFile(__dirname + '/failure.html')
+            // res.sendFile('failure.html')
         }
         
     })
