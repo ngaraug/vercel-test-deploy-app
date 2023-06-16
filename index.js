@@ -64,6 +64,7 @@ app.post('/', (req,res)=>{
             // console.log(JSON.parse(data))
             JSON.parse(data)
         })
+        console.log(response.statusCode)
         if(response.statusCode === 200){
             res.sendFile(__dirname + '/success.html')
             // res.sendFile('success.html')
